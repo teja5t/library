@@ -1,5 +1,6 @@
 * {
     font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
 
 h1.title {
     color: #253C78;
+    font-size: 36px;
 }
 
 .library {
@@ -56,6 +58,31 @@ button {
     margin-top: auto;
 }
 
+.inp {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog {
+    border-radius: 10px;
+    background-color: #C9A690;
+}
+
+dialog input {
+    background-color:#FFEECF;
+    border: none;
+    border-radius: 5px;
+}
+
 button:active {
     background-color: #b27c90;
+}
+
+.add-book {
+    margin-top: 25px;
+    margin-bottom: 100px;
 }

@@ -86,6 +86,9 @@ showButton.addEventListener("click", () => {
 submitButton.addEventListener("click", (e) => {
     e.preventDefault()
     if (addNewBook()) {
+        document.querySelector("#title").value = "";
+        document.querySelector("#author").value = "";
+        document.querySelector("#pages").value = "";
         dialog.close();
     }
 });
