@@ -26,10 +26,13 @@ h1.title {
     margin: 30px;
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .book * {
     color: #253C78;
+    padding: 5px;
 }
 
 .book .title {
@@ -46,8 +49,11 @@ button {
     color: #253C78;
     background-color: #D36582;
     border: none;
+    width: 120px;
     font-size: 18px;
     border-radius: 5px;
+    align-self: center;
+    margin-top: auto;
 }
 
 button:active {
