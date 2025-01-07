@@ -1,10 +1,55 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #FFEECF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.title {
+    color: #253C78;
+}
+
 .library {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .book {
-    background-color: aliceblue;
-    margin: 10px;
-    padding: 5px;
+    background-color: lightblue;
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.book * {
+    color: #253C78;
+}
+
+.book .title {
+    font-size: 32px;
+}
+
+.book .author,
+.book .pages {
+    font-size: 18px
+}
+
+button {
+    padding: 10px 20px 10px 20px;
+    color: #253C78;
+    background-color: #D36582;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #b27c90;
 }

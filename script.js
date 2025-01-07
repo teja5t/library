@@ -27,6 +27,9 @@ function showBooks() {
             bookContainer.appendChild(keyContainer);
         }
 
+        bookContainer.querySelector(".author").textContent = "Author: " + bookContainer.querySelector(".author").textContent;
+        bookContainer.querySelector(".pages").textContent = "Pages: " + bookContainer.querySelector(".pages").textContent;
+
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.id = book.title.replaceAll(" ", "_");
