@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -27,6 +27,15 @@ function showBooks() {
             bookContainer.appendChild(keyContainer);
         }
 
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.id = book.title.replaceAll(" ", "_");
+        deleteButton.addEventListener("click", () => {
+            myLibrary = myLibrary.filter((book) => book.title.replaceAll(" ", "_") !== deleteButton.id);
+            showBooks();
+        }); 
+        bookContainer.appendChild(deleteButton);
+
         libraryContainer.append(bookContainer);
     }
 }
@@ -52,9 +61,14 @@ function addNewBook() {
     const newAuthor = document.querySelector("#author").value;
     const newPages = document.querySelector("#pages").value;
     const newRead = document.querySelector("#read").checked;
+    if (!newTitle || !newAuthor || isNaN(newPages) || newPages < 0) {
+        alert("Please fill all fields correctly.");
+        return false;
+    }
     const newBook = new Book(newTitle, newAuthor, newPages, newRead);
     console.log(newBook);
     addBookToLibrary(newBook);
+    return true;
 }
 
 const dialog = document.querySelector("dialog");
@@ -69,6 +83,7 @@ showButton.addEventListener("click", () => {
 
 submitButton.addEventListener("click", (e) => {
     e.preventDefault()
-    addNewBook();
-    dialog.close()
+    if (addNewBook()) {
+        dialog.close();
+    }
 });
