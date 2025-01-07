@@ -1,0 +1,10 @@
+.library {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 5px;
+}
